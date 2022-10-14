@@ -1,0 +1,323 @@
+//站內信上選項
+.topList {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 45px;
+    left: 0;
+    z-index: 100;
+
+    ul {
+        width: 100%;
+        height: auto;
+        @include listStyle_1;
+
+        li {
+            width: 50%;
+            height: 40px;
+        }
+    }
+}
+
+//內容
+.mailBody {
+    padding-top: 40px;
+
+    &.normal {
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        //中選項
+        .subClass {
+            width: 100%;
+            height: auto;
+            background: $mainBG_2;
+            position: fixed;
+            top: 85px;
+            left: 0;
+            z-index: 100;
+            padding: 10px 15px;
+
+            ul {
+                width: 100%;
+                height: auto;
+                display: flex;
+
+                li {
+                    width: 50%;
+                    height: 10.67vw;
+                    @include bigGrayBtn;
+
+                    &:nth-of-type(1){
+                        border-radius: 5px 0 0 5px;
+                    }
+
+                    &:last-child {
+                        border-radius: 0 5px 5px 0;
+                    }
+                }
+            }
+        }
+
+        //編輯
+        .editBox {
+            width: 100%;
+            height: auto;
+            background: $mainBG_2;
+            justify-content: space-between;
+            display: none;
+            position: fixed;
+            top: 145px;
+            left: 0;
+            z-index: 100;
+            padding: 16px;
+
+            &.display {
+                display: flex;
+            }
+
+            .all {
+                color: $title_2;
+                font-size: 4vw;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+
+                input {
+                    @include checkBox;
+                    margin-right: 10px;
+                }
+            }
+
+            .modify {
+
+                button {
+                    width: 82px;
+                    height: 28px;
+                    @include noBgBtn_Color1;
+                    font-size: 3vw;
+
+                    &.delete {
+                        @include noBgBtn_Color2;
+                        font-size: 3vw;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        //內容
+        .mailBox {
+            width: 100%;
+            height: auto;
+            padding-top: 60px;
+
+            &.editing {
+                padding-top: 120px;
+
+                .title,.textBox {
+                    padding: 0 30px 0 50px;
+                }
+
+                .inputBox {
+                    display: flex;
+                }
+            }
+            
+            &.system,&.personal {
+                display: none;
+
+                &.display {
+                    display: block;
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                padding: 15px 4%;
+
+                li {
+                    width: 100%;
+                    height: 108px;
+                    @include mailWrap;
+                    margin-bottom: 10px;
+
+                    .title {
+                        width: 100%;
+                        height: 40%;
+                        color: $title_2;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: flex-end;
+                        padding: 0 30px;
+                    }
+
+                    .textBox {
+                        width: 100%;
+                        height: 60%;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        padding: 0 30px;
+
+                        p {
+                            width: 100%;
+                            height: auto;
+                            color: $mainWord_1;
+                            font-size: 3.4vw;
+                            font-weight: bold;
+                            @include textHidden;
+                        }
+
+                        .date {
+                            color: $title_Time;
+                            font-size: 3vw;
+                            font-weight: bold;
+                            position: absolute;
+                            top: 0;
+                            right: 30px;
+                        }
+                    }
+
+                    .inputBox {
+                        display: none;
+                        width: 50px;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        align-items: center;
+                        justify-content: center;
+
+                        input {
+                            @include checkBox;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.post {
+        display: none;
+
+        &.display {
+            display: block;
+        }
+
+        //中選項
+        .subClass {
+            width: 100%;
+            height: auto;
+            background: $mainBG_2;
+            position: fixed;
+            top: 85px;
+            left: 0;
+            z-index: 100;
+            padding: 10px 15px;
+
+            ul {
+                width: 100%;
+                height: auto;
+                display: flex;
+
+                li {
+                    width: 34%;
+                    height: 10.67vw;
+                    @include bigGrayBtn;
+                    
+                    &:nth-of-type(1) {
+                        border-radius: 5px 0 0 5px;
+                    }
+
+                    &:last-child {
+                        border-radius: 0 5px 5px 0;
+                    }
+                }
+            }
+        }
+
+        //內容
+        .mailBox {
+            width: 100%;
+            height: auto;
+            padding-top: 60px;
+
+            &.hot,&.nor,&.dep {
+                display: none;
+
+                &.display {
+                    display: block;
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                padding: 15px 4%;
+
+                li {
+                    width: 100%;
+                    height: auto;
+                    @include mailWrap;
+                    margin-bottom: 10px;
+
+                    p {
+                        width: 100%;
+                        height: auto;
+                        color: $title_2;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        @include textHidden;
+                        padding: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//內文
+.mailContent {
+    width: 90%;
+    height: calc(100vh - 125px);
+    background: $mainBG_1;
+    border: solid 1px $mainBorder_2;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 $boxshadow_1;
+    position: relative;
+    overflow-y: auto;
+    margin: 15px auto;
+    padding: 10vw 15px;
+
+    &::before {
+        content: "";
+        position: fixed;
+        top: 61px;
+        left: calc(50% + 1px);
+        transform: translateX(-50%);
+        width: calc(90% - 2px);
+        height: 8vw;
+        border-radius: 10px 10px 0 0;
+        background: $mailCnt_TopBG;
+    }
+
+    .title {
+        color: $title_2;
+        font-size: 4.5;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    .msg {
+        color: $mainWord_1;
+        font-size: 3.4vw;
+        font-weight: bold;
+        line-height: 20px;
+    }
+}

@@ -1,0 +1,129 @@
+//slot頁
+.slotWrap {
+    width: 100%;
+    height: auto;
+
+    //slot上選單
+    .slotHeader {
+        width: 100%;
+        height: 80px;
+        background: $mainBG_1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: fixed;
+        top: 45px;
+        left: 0;
+        z-index: 100;
+        padding: 0 4%;
+
+        //選單
+        .listBox {
+            width: 100%;
+            height: auto;
+
+            ul {
+                width: 100%;
+                height: auto;
+                @include listStyle_1;
+                justify-content: space-between;
+                margin-bottom: 8px;
+
+                li {
+                    width: auto;
+                    height: auto;
+                    padding: 5px 1.33vw;
+                    
+                    &.active {
+                        color: $choose_ActiveWord;
+                        border-color: $choose_Border;
+                    }
+
+                    i {
+                        width: 13px;
+                        height: 13px;
+                        margin-right: 5px;
+
+                        &.hot_ic {
+                            height: 16px;
+                        }
+
+                        &.love_ic {
+                            margin-bottom: -4px;
+                        }
+                    }
+                }
+            }
+        }
+
+        //搜尋列
+        .searchBox {
+            width: 100%;
+            height: 28px;
+            margin-bottom: 5px;
+            @include slotSearch;
+
+            .search_ic {
+                width: 15px;
+                height: 15px;
+            }
+
+            input {
+                width: 100%;
+                height: auto;
+                @include slotSearch_Input;
+            }
+        }
+    }
+
+    //slot遊戲列
+    .gameList {
+        @include bgStyle_1;
+        min-height: calc(100vh - 135px);
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 8px;
+        padding: 90px 2vw 10px;
+
+        .gameBox {
+            width: auto;
+            height: 175px;
+            @include slotGameBox;
+
+            p {
+                width: 100%;
+                height: 30px;
+                color: $slotGame_Word;
+                font-size: 14px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 15px;
+
+                .love {
+                    width: 4vw;
+                    height: 4vw;
+                }
+            }
+
+            .btnBox {
+                width: 100%;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+
+                button {
+                    width: 20vw;
+                    height: 32px;
+                    @include slotGameBtn_1;
+
+                    &.try {
+                        @include slotGameBtn_2;
+                    }
+                }
+            }
+        }
+    }
+}

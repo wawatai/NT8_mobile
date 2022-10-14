@@ -1,0 +1,327 @@
+//投注紀錄
+.bettingWrap {
+    @include bgStyle_1;
+
+    .searchContent {
+        width: 100%;
+        height: auto;
+        background: $mainBG_1;
+        margin-bottom: 10px;
+        padding: 13px 14px;
+
+        .top {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+            .helf {
+                width: 50%;
+
+                p {
+                    color: $title_2;
+                    font-size: 3.4vw;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    margin-bottom: 5px;
+                }
+    
+                button {
+                    width: 44vw;
+                    height: 42px;
+                    @include fakeSelect;
+                }
+            }
+
+            .full {
+                width: 100%;
+
+                p {
+                    color: $title_2;
+                    font-size: 3.4vw;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    margin: 10px 0;
+                }
+
+                .inputBox {
+                    width: 100%;
+                    height: 42px;
+                    border: solid 1px $mainBorder_2;
+                    border-radius: 3px;
+                    color: $mainWord_1;
+                    font-size: 4vw;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    input {
+                        width: auto;
+                        height: 100%;
+                        border: none;
+                        background: none;
+                        color: $mainWord_1;
+                        font-size: 3.4vw;
+                        font-weight: bold;
+                    }
+                }
+
+                .selectBox {
+                    width: 100%;
+                    height: auto;
+
+                    select {
+                        width: 100%;
+                        height: 42px;
+                        @include mainSelect;
+                    }
+                }
+            }
+        }
+
+        .date {
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin: 20px 0;
+
+            button {
+                width: 25%;
+                height: 38px;
+                @include changeBtn;
+
+                &:nth-of-type(1) {
+                    border-radius: 5px 0 0 5px;
+                }
+            
+                &:last-child {
+                    border-radius: 0 5px 5px 0;
+                }
+            }
+        }
+
+        .check {
+            width: 100%;
+            height: 42px;
+            @include mainBtn;
+        }
+    }
+
+    .list {
+        width: 100%;
+        height: auto;
+        padding: 10px 14px;
+
+        .noData {
+            display: none;
+            width: 100%;
+            height: auto;
+            color: $title_3;
+            font-size: 3.4vw;
+            font-weight: bold;
+            text-align: center;
+            padding: 80px;
+
+            &.display {
+                display: block;
+            }
+        }
+
+        .recordBox {
+            display: none;
+            width: 100%;
+            height: auto;
+            background: $mainBG_1;
+            border-radius: 5px;
+            border: solid 1px $mainBorder_2;
+            margin-bottom: 10px;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                width: 100%;
+                height: 38px;
+                border-bottom: solid 1px $mainBorder_1;
+                color: $title_1;
+                font-size: 3.4vw;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 18px;
+                
+                .date {
+                    font-size: 3vw;
+                    color: $title_Time;
+                }
+
+                button {
+                    width: 80px;
+                    height: 26px;
+                    @include noBgBtn_Normal;
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+                padding: 0 18px;
+
+                li {
+                    width: 100%;
+                    height: 38px;
+                    color: $title_2;
+                    font-size: 3.4vw;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    p {
+                        font-size: 13px;
+
+                        &.num {
+                            color: $mainWord_1;
+    
+                            &.win {
+                                color: $remind;
+                            }
+    
+                            &.lose {
+                                color: $remind_Sp;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //交易紀錄用
+    &.deal {
+        padding: 50px 0 0 0;
+    }
+}
+
+//交易紀錄上選項
+.recordTop {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 45px;
+    left: 0;
+    z-index: 100;
+
+    ul {
+        width: 100%;
+        height: auto;
+        @include listStyle_1;
+
+        li {
+            width: 50%;
+            height: 40px;
+        }
+    }
+}
+
+.waterBox {
+    width: 100%;
+    height: auto;
+    padding: 15px 4vw;
+
+    .noData {
+        display: none;
+        width: 100%;
+        height: auto;
+        color: $title_3;
+        font-size: 3.4vw;
+        font-weight: bold;
+        text-align: center;
+        padding: 80px;
+
+        &.display {
+            display: block;
+        }
+    }
+
+    ul {
+        width: 100%;
+        height: auto;
+
+        li {
+            width: 100%;
+            height: auto;
+            background: $mainBG_1;
+            border: solid 1px $mainBorder_2;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            p {
+                width: 100%;
+                height: 40px;
+                font-size: 3.4vw;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 14px;
+
+                &.title {
+                    color: $title_1;
+                    border-bottom: solid 1px $mainBorder_1;
+                }
+
+                span {
+                    font-size: 3.4vw;
+                    font-weight: bold;
+
+                    &:nth-of-type(1) {
+                        color: $title_2;
+                    }
+
+                    &:last-child {
+                        color: $mainWord_1;
+                    }
+
+                    &.sp {
+                        color: $remind_Sp;
+                    }
+                }
+            }
+
+            .remindBox {
+                width: calc(100% - 28px);
+                height: 42px;
+                @include wordBox;
+                margin: 0 auto;
+            }
+
+            .btnBox {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0;
+                padding: 0 14px;
+
+                button {
+                    width: 48%;
+                    height: 38px;
+
+                    &:nth-of-type(1) {
+                        @include noBgBtn_Normal;
+                        font-size: 3.4vw;
+                    }
+
+                    &:last-child {
+                        @include mainBtn;
+                        font-size: 3.4vw;
+                    }
+                }
+            }
+        }
+    }
+}
