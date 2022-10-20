@@ -215,6 +215,11 @@
                         &.lose {
                             color: $remind_Sp;
                         }
+
+                        &.link {
+                            color: $link;
+                            text-decoration: underline;
+                        }
                     }
                 }
             }

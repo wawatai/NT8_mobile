@@ -402,6 +402,19 @@ $(function(){
         .addClass('display');
     })
 
+    $(".recordBox .check").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.pointWindow')
+        .addClass('display');
+    })
+    $(".recordBox .num.link").click(function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.pointDetail')
+        .addClass('display');
+    })
+
     $('.opLang').click(function(){
         $('.jumpWindow')
         .removeClass('display');

@@ -2515,7 +2515,7 @@ html body .filter .jumpWindow.bettingDetail .content .tableBox table {
   height: auto;
 }
 html body .filter .jumpWindow.bettingDetail .content .tableBox table tr th {
-  height: 40px;
+  height: 8vw;
   background: #bd8416;
   vertical-align: middle;
 }
@@ -2527,7 +2527,7 @@ html body .filter .jumpWindow.bettingDetail .content .tableBox table tr th p {
   padding: 0 10px;
 }
 html body .filter .jumpWindow.bettingDetail .content .tableBox table tr td {
-  height: 40px;
+  height: 8vw;
   background: #ffffff;
   vertical-align: middle;
 }
@@ -2547,6 +2547,58 @@ html body .filter .jumpWindow.bettingDetail .content .tableBox table tr td p.win
   color: #e11515;
 }
 html body .filter .jumpWindow.bettingDetail .content .tableBox table tr td p.lose {
+  color: #009245;
+}
+html body .filter .jumpWindow.pointDetail .content {
+  width: 100%;
+  height: auto;
+  background: #f4f4f4;
+  border-radius: 0 0 10px 10px;
+  padding: 14px;
+}
+html body .filter .jumpWindow.pointDetail .content .tableBox {
+  width: 100%;
+  height: auto;
+  border: solid 1px #aeaeae;
+}
+html body .filter .jumpWindow.pointDetail .content .tableBox table {
+  width: 100%;
+  height: auto;
+}
+html body .filter .jumpWindow.pointDetail .content .tableBox table tr th {
+  height: 8vw;
+  background: #bd8416;
+  vertical-align: middle;
+}
+html body .filter .jumpWindow.pointDetail .content .tableBox table tr th p {
+  color: #ffffff;
+  font-size: 3.4vw;
+  font-weight: bold;
+  white-space: nowrap;
+  padding: 0 10px;
+}
+html body .filter .jumpWindow.pointDetail .content .tableBox table tr td {
+  width: 34%;
+  height: 8vw;
+  background: #ffffff;
+  vertical-align: middle;
+}
+html body .filter .jumpWindow.pointDetail .content .tableBox table tr td:last-child p {
+  border: none;
+}
+html body .filter .jumpWindow.pointDetail .content .tableBox table tr td p {
+  border-right: solid 1px #aeaeae;
+  color: #2e2e36;
+  font-size: 3.4vw;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
+  padding: 0 10px;
+}
+html body .filter .jumpWindow.pointDetail .content .tableBox table tr td p.win {
+  color: #e11515;
+}
+html body .filter .jumpWindow.pointDetail .content .tableBox table tr td p.lose {
   color: #009245;
 }
 html body .filter .jumpWindow.loading .content {
@@ -6360,6 +6412,10 @@ html body .bettingWrap .list .recordBox ul li p.win {
 }
 html body .bettingWrap .list .recordBox ul li p.lose {
   color: #009245;
+}
+html body .bettingWrap .list .recordBox ul li p.link {
+  color: #193ca6;
+  text-decoration: underline;
 }
 html body .bettingWrap .list .recordBox .innerBox {
   width: 100%;
