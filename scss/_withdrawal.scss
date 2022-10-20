@@ -6,9 +6,7 @@
     .walletBox {
         width: 100%;
         height: auto;
-        background: $mainBG_1;
-        padding-bottom: 15px;
-        margin-bottom: 10px;
+        margin: 10px 0;
 
         //漸層
         .gradient {
@@ -17,50 +15,49 @@
 
             .content {
                 width: 92vw;
-                height: 21vw;
+                height: auto;
                 background: $mainBG_1;
                 border-radius: 5px;
-                border: solid 1px $mainBorder_2;
-                box-shadow: 0 0 5px 0 $boxshadow_2;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                padding: 10px 14px;
-                margin: 25px auto 16px;
+                border: solid 1px $mainBorder_1;
+                box-shadow: 0 5px 6px -2px $mainShadow_2;
+                padding: 14px;
+                margin: 0 auto 10px;
 
                 .title {
-                    color: $title_1;
-                    font-size: 3.4vw;
+                    color: $mainWord_1;
+                    font-size: 4vw;
                     font-weight: bold;
                     display: flex;
                     align-items: center;
+                    margin-bottom: 10px;
 
                     i {
-                        width: 4.27vw;
-                        height: 4.27vw;
+                        width: 4vw;
+                        height: 4vw;
                         margin-left: 10px;
                     }
                 }
 
                 .amount {
                     color: $money;
-                    font-size: 8vw;
+                    font-size: 6vw;
                     font-weight: bold;
                 }
             }
 
             .detail {
                 width: 100%;
-                height: 15vw;
+                height: 16vw;
+                background: $mainBG_1;
                 border-bottom: solid 1px $mainBorder_1;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding: 0 25px;
+                padding: 0 24px;
 
                 p {
-                    color: $title_2;
-                    font-size: 3.4vw;
+                    color: $mainWord_1;
+                    font-size: 3.7vw;
                     font-weight: bold;
                     display: flex;
                     flex-direction: column;
@@ -68,13 +65,14 @@
                     button {
                         width: 18vw;
                         height: 6vw;
-                        @include mainBtn;
+                        @include thirdBtn;
                         font-size: 3vw;
                         margin-top: 8px;
+                        padding: 0;
                     }
 
                     &.num {
-                        color: $mainWord_1;
+                        color: $money;
                         font-size: 4.5vw;
                     }
                 }
@@ -83,34 +81,35 @@
 
         .walletDetail {
             width: 100%;
-            height: 42px;
+            height: 10vw;
+            background: $mainBG_1;
             overflow: hidden;
-            margin-top: 10px;
+            box-sizing: content-box;
+            padding: 10px 0;
 
             &.active {
                 height: auto;
             }
 
             .check {
-                width: 92.8vw;
-                height: 42px;
+                width: 75%;
+                height: 10vw;
                 @include mainBtn;
                 display: block;
                 margin: 0 auto;
             }
 
             .detailBox {
-                padding-bottom: 15px;
                 margin-top: 10px;
     
                 ul {
                     width: 100%;
                     height: auto;
-                    max-height: 67.16vw;
+                    max-height: 67vw;
                     display: grid;
                     grid-template-columns: repeat(3,1fr);
                     gap: 8px;
-                    padding: 0 3.6vw;
+                    padding: 0 14px;
                     overflow: hidden;
     
                     &.active {
@@ -120,19 +119,19 @@
                     li {
                         width: auto;
                         height: auto;
-                        min-height: 16.53vw;
-                        border: solid 1px $mainBorder_1;
-                        border-radius: 1.5vw;
-                        padding: 8px 0 0 11px;
+                        min-height: 16.5vw;
+                        border: solid 1px $mainBorder_2;
+                        border-radius: 5px;
+                        padding: 8px 0 0 10px;
     
                         div {
-                            color: $title_2;
+                            color: $mainWord_1;
                             font-size: 3vw;
                             font-weight: bold;
                             letter-spacing: 1px;
                             display: flex;
                             align-items: center;
-
+    
                             .smallInfo {
                                 width: 4.5vw;
                                 height: 4.5vw;
@@ -140,38 +139,27 @@
                                 opacity: 0;
                                 pointer-events: none;
                                 margin-left: 5px;
-        
+    
                                 &.display {
                                     opacity: 1;
                                     pointer-events: visible;
                                 }
-        
-                                &:hover,&:active,&.active {
-        
-                                    .inner {
-                                        display: block;
-                                    }
-                                }
-        
+    
                                 .inner {
-                                    display: none;
-                                    width: auto;
-                                    height: auto;
                                     @include smallTip;
-                                    position: absolute;
+                                    display: none;
                                     left: 50%;
                                     transform: translateX(-50%);
-                                    bottom: -30px;
-                                    padding: 6px 18px;
+                                    bottom: -6vw;
                                 }
                             }
                         }
     
                         p {
-                            margin-top: 10px;
+                            color: $money;
                             font-size: 4.5vw;
-                            color: $mainWord_1;
                             font-weight: bold;
+                            margin-top: 10px;
                         }
                     }
                 }
@@ -183,26 +171,29 @@
                     justify-content: center;
                     margin-top: 15px;
     
+                    &.active {
+    
+                        div {
+    
+                            .db_arrow {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+    
                     div {
-                        color: $title_2;
+                        color: $mainWord_1;
                         font-size: 3vw;
                         font-weight: bold;
                         letter-spacing: 1px;
                         display: flex;
                         align-items: center;
     
-                        &.active {
-    
-                            .db_arrow {
-                                transform: rotate(180deg);
-                            }
-                        }
-    
                         .db_arrow {
                             width: 3vw;
                             height: 3vw;
+                            margin-left: 10px;
                             transition: all 0.5s ease;
-                            margin-left: 9px;
                         }
                     }
                 }
@@ -222,14 +213,14 @@
             height: auto;
             @include wordBox;
             font-size: 3vw;
-            line-height: 4.5vw;
+            line-height: 5.5vw;
             padding: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         select {
             width: 100%;
-            height: 42px;
+            height: 10vw;
             @include mainSelect;
         }
         
@@ -242,24 +233,28 @@
 
         input {
             width: 100%;
-            height: 42px;
+            height: 10vw;
             @include mainInput;
-            margin-top: 25px;
+            margin-top: 15px;
         }
 
         .check {
-            width: 100%;
-            height: 42px;
+            width: 80%;
+            height: 10vw;
             @include mainBtn;
-            margin-top: 10px;
+            display: block;
+            margin: 10px auto 0;
         }
     }
 
     //提醒
     .remindBox {
-        width: 92.27vw;
+        width: 92vw;
         height: auto;
-        @include remindBox;
+        background: $mainBG_1;
+        border-radius: 5px;
+        border: solid 1px $mainBorder_1;
+        padding: 14px;
         margin: 10px auto 0;
 
         p {
@@ -271,7 +266,7 @@
 
             &.title {
                 color: $title_1;
-                font-size: 3.4vw;
+                font-size: 3.7vw;
                 letter-spacing: 1px;
                 margin-bottom: 10px;
             }

@@ -6,86 +6,64 @@
     .walletBox {
         width: 100%;
         height: auto;
-        background: $mainBG_1;
-        padding: 25px 0 30px;
-        margin-bottom: 10px;
+        margin: 17px 0;
 
         //漸層
-        .gradient {
-            width: 100%;
+        .content {
+            width: 92vw;
             height: auto;
+            background: $mainBG_1;
+            border: solid 1px $mainBorder_1;
+            border-radius: 12px;
+            box-shadow: 0 5px 6px -2px $mainShadow_2;
+            margin: 0 auto 17px;
 
-            .content {
-                width: 92vw;
+            .amount {
+                width: 100%;
                 height: auto;
-                background: $mainBG_1;
-                border: solid 1px $mainBorder_2;
-                border-radius: 5px;
-                box-shadow: 0 10px 12px -2px $boxshadow_2;
-                margin: 0 auto 30px;
+                display: flex;
+                border-bottom: solid 1px $mainBorder_1;
 
-                .amount {
-                    width: 100%;
+                .half {
+                    width: 50%;
                     height: auto;
-                    display: flex;
-                    border-bottom: solid 1px $mainBorder_1;
+                    padding: 12px 0 12px 15px;
 
-                    .half {
-                        width: 50%;
-                        height: auto;
-                        padding: 12px 0 12px 15px;
-
-                        .title {
-                            color: $title_1;
-                            font-size: 4vw;
-                            font-weight: bold;
-                            letter-spacing: 2px;
-                            display: flex;
-                            align-items: center;
-                            margin-bottom: 10px;
-                        }
-
-                        .money {
-                            width: 100%;
-                            height: auto;
-                            color: $money;
-                            font-size: 25px;
-                            font-weight: bold;
-                            display: flex;
-                            align-items: center;
-                        }
+                    .title {
+                        color: $mainWord_1;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        margin-bottom: 10px;
                     }
-                }
 
-                .details {
-                    width: 100%;
-                    height: auto;
-                    display: flex;
-                    
-                    .items {
+                    .money {
                         width: 100%;
-                        height: 10.67vw;
+                        height: auto;
+                        color: $money;
+                        font-size: 6vw;
+                        font-weight: bold;
                         display: flex;
                         align-items: center;
-                        padding: 0 15px;
+                    }
+                }
+            }
 
-                        p {
-                            color: $title_2;
-                            font-size: 4vw;
-                            font-weight: bold;
-                            white-space: nowrap;
+            .details {
+                width: 100%;
+                height: 10vw;
+                display: flex;
+                align-items: center;
+                padding: 0 14px;
+                
+                p {
+                    color: $mainWord_1;
+                    font-size: 3.7vw;
+                    font-weight: bold;
 
-                            &:nth-of-type(1) {
-                                font-size: 3vw;
-                                text-align: center;
-                            }
-
-                            &:nth-of-type(2) {
-                                color: $money_Sp;
-                                text-align: right;
-                                padding: 0 10px;
-                            }
-                        }
+                    span {
+                        color: $remind;
+                        margin-left: 10px;
                     }
                 }
             }
@@ -95,26 +73,29 @@
         ul {
             width: 100%;
             height: auto;
+            background: $mainBG_1;
             display: flex;
             justify-content: space-between;
-            padding: 0 12.8vw;
+            padding: 5vw 16vw;
 
             li {
+                width: auto;
+                height: auto;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
 
                 i {
-                    width: 11.47vw;
-                    height: 11.47vw;
+                    width: 11.5vw;
+                    height: 11.5vw;
                 }
 
                 p {
-                    color: $title_2;
-                    font-size: 3vw;
+                    color: $mainWord_1;
+                    font-size: 3.7vw;
                     font-weight: bold;
                     letter-spacing: 1px;
-                    padding-top: 6px;
+                    margin-top: 6px;
                 }
             }
         }
@@ -135,32 +116,32 @@
             .title {
                 width: 100%;
                 height: auto;
-                color: $title_Time;
+                color: $time;
                 font-size: 3vw;
                 font-weight: bold;
                 letter-spacing: 1px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding: 8px 15px 0;
-                margin-bottom: 11px;
+                padding: 10px 14px;
 
                 button {
-                    width: 18.93vw;
-                    height: 6.13vw;
-                    @include mainBtn;
+                    width: 20vw;
+                    height: 6vw;
+                    @include thirdBtn;
                     font-size: 3vw;
+                    padding: 0;
                 }
             }
 
             ul {
                 width: 100%;
                 height: auto;
-                max-height: 67.16vw;
+                max-height: 67vw;
                 display: grid;
                 grid-template-columns: repeat(3,1fr);
                 gap: 8px;
-                padding: 0 3.6vw;
+                padding: 0 14px;
                 overflow: hidden;
 
                 &.active {
@@ -170,14 +151,14 @@
                 li {
                     width: auto;
                     height: auto;
-                    min-height: 16.53vw;
+                    min-height: 16.5vw;
                     border: solid 1px $mainBorder_2;
                     border-radius: 5px;
-                    padding: 8px 0 0 11px;
+                    padding: 8px 0 0 10px;
 
                     div {
-                        color: $title_2;
-                        font-size: 12px;
+                        color: $mainWord_1;
+                        font-size: 3vw;
                         font-weight: bold;
                         letter-spacing: 1px;
                         display: flex;
@@ -196,22 +177,12 @@
                                 pointer-events: visible;
                             }
 
-                            &:hover,&:active,&.active {
-
-                                .inner {
-                                    display: block;
-                                }
-                            }
-
                             .inner {
-                                display: none;
-                                width: auto;
-                                height: auto;
                                 @include smallTip;
-                                position: absolute;
+                                display: none;
                                 left: 50%;
                                 transform: translateX(-50%);
-                                bottom: -30px;
+                                bottom: -6vw;
                             }
                         }
                     }
@@ -232,25 +203,28 @@
                 justify-content: center;
                 margin-top: 15px;
 
+                &.active {
+
+                    div {
+
+                        .db_arrow {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
                 div {
-                    color: $title_2;
+                    color: $mainWord_1;
                     font-size: 3vw;
                     font-weight: bold;
                     letter-spacing: 1px;
                     display: flex;
                     align-items: center;
 
-                    &.active {
-
-                        .db_arrow {
-                            transform: rotate(180deg);
-                        }
-                    }
-
                     .db_arrow {
                         width: 3vw;
                         height: 3vw;
-                        margin-left: 9px;
+                        margin-left: 10px;
                         transition: all 0.5s ease;
                     }
                 }
@@ -267,29 +241,29 @@
 
         &:active,&.active {
 
-            .betting_ic,.deal_ic {
-                background-position-y: calc(100% - 1px);
-            }
-
-            .arrow_ic {
-                background-position-y: 100%;
+            p {
+                color: $longBtn_ActiveColor;
             }
         }
 
-        .betting_ic,.deal_ic {
-            width: 6vw;
-            height: 8vw;
-            margin-right: 4vw;
-        }
+        p {
+            color: $longBtn_Color;
+            font-size: 3.7vw;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
 
-        .deal_ic {
-            background-position-x: 100%;
+            .betting_ic,
+            .deal_ic {
+                width: 8vw;
+                height: 8vw;
+                margin-right: 4vw;
+            }
         }
 
         .arrow_ic {
-            width: 2vw;
-            height: 3.4vw;
-            transform: scaleX(-1);
+            width: 3vw;
+            height: 3vw;
         }
     }
 }

@@ -10,11 +10,24 @@
     ul {
         width: 100%;
         height: auto;
-        @include listStyle_1;
+        background: $mainBG_1;
+        display: flex;
 
         li {
             width: 50%;
             height: 40px;
+            border-bottom: solid 3px transparent;
+            color: $mainWord_1;
+            font-size: 4vw;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.active {
+                color: $title_1;
+                border-color: $mainBorder_1;
+            }
         }
     }
 }
@@ -34,12 +47,12 @@
         .subClass {
             width: 100%;
             height: auto;
-            background: $mainBG_2;
+            background: $BG;
             position: fixed;
             top: 85px;
             left: 0;
             z-index: 100;
-            padding: 10px 15px;
+            padding: 14px 32px;
 
             ul {
                 width: 100%;
@@ -48,15 +61,20 @@
 
                 li {
                     width: 50%;
-                    height: 10.67vw;
-                    @include bigGrayBtn;
+                    height: 11vw;
+                    @include secondBtn;
+                    border-right-width: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
                     &:nth-of-type(1){
-                        border-radius: 5px 0 0 5px;
+                        border-radius: 30px 0 0 30px;
                     }
 
                     &:last-child {
-                        border-radius: 0 5px 5px 0;
+                        border-radius: 0 30px 30px 0;
+                        border-right-width: 1px;
                     }
                 }
             }
@@ -66,9 +84,9 @@
         .editBox {
             width: 100%;
             height: auto;
-            background: $mainBG_2;
-            justify-content: space-between;
+            background: $BG;
             display: none;
+            justify-content: space-between;
             position: fixed;
             top: 145px;
             left: 0;
@@ -80,14 +98,16 @@
             }
 
             .all {
-                color: $title_2;
+                color: $mainWord_1;
                 font-size: 4vw;
                 font-weight: bold;
                 display: flex;
                 align-items: center;
 
                 input {
-                    @include checkBox;
+                    width: 4.5vw;
+                    height: 4.5vw;
+                    @include checkbox;
                     margin-right: 10px;
                 }
             }
@@ -95,14 +115,12 @@
             .modify {
 
                 button {
-                    width: 82px;
-                    height: 28px;
-                    @include noBgBtn_Color1;
-                    font-size: 3vw;
+                    width: 14vw;
+                    height: 8vw;
+                    @include mailBtn_1;
 
                     &.delete {
-                        @include noBgBtn_Color2;
-                        font-size: 3vw;
+                        @include mailBtn_2;
                         margin-left: 10px;
                     }
                 }
@@ -116,7 +134,7 @@
             padding-top: 60px;
 
             &.editing {
-                padding-top: 120px;
+                padding-top: 110px;
 
                 .title,.textBox {
                     padding: 0 30px 0 50px;
@@ -138,18 +156,18 @@
             ul {
                 width: 100%;
                 height: auto;
-                padding: 15px 4%;
+                padding: 15px 14px;
 
                 li {
                     width: 100%;
-                    height: 108px;
+                    height: 28vw;
                     @include mailWrap;
                     margin-bottom: 10px;
 
                     .title {
                         width: 100%;
                         height: 40%;
-                        color: $title_2;
+                        color: $title_1;
                         font-size: 4vw;
                         font-weight: bold;
                         display: flex;
@@ -175,7 +193,7 @@
                         }
 
                         .date {
-                            color: $title_Time;
+                            color: $time;
                             font-size: 3vw;
                             font-weight: bold;
                             position: absolute;
@@ -195,7 +213,24 @@
                         justify-content: center;
 
                         input {
-                            @include checkBox;
+                            width: 5.5vw;
+                            height: 5.5vw;
+                            @include checkbox;
+                        }
+                    }
+
+                    &.read {
+
+                        .title {
+                            color: $mailWrap_readColor;
+                        }
+
+                        .textBox {
+
+                            p,
+                            .date {
+                                color: $mailWrap_readColor;
+                            }
                         }
                     }
                 }
@@ -214,12 +249,12 @@
         .subClass {
             width: 100%;
             height: auto;
-            background: $mainBG_2;
+            background: $BG;
             position: fixed;
             top: 85px;
             left: 0;
             z-index: 100;
-            padding: 10px 15px;
+            padding: 14px 32px;
 
             ul {
                 width: 100%;
@@ -228,15 +263,21 @@
 
                 li {
                     width: 34%;
-                    height: 10.67vw;
-                    @include bigGrayBtn;
-                    
-                    &:nth-of-type(1) {
-                        border-radius: 5px 0 0 5px;
+                    height: 11vw;
+                    @include secondBtn;
+                    border-radius: 0;
+                    border-right-width: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:nth-of-type(1){
+                        border-radius: 30px 0 0 30px;
                     }
 
                     &:last-child {
-                        border-radius: 0 5px 5px 0;
+                        border-radius: 0 30px 30px 0;
+                        border-right-width: 1px;
                     }
                 }
             }
@@ -248,7 +289,9 @@
             height: auto;
             padding-top: 60px;
 
-            &.hot,&.nor,&.dep {
+            &.hot,
+            &.nor,
+            &.dep {
                 display: none;
 
                 &.display {
@@ -259,7 +302,7 @@
             ul {
                 width: 100%;
                 height: auto;
-                padding: 15px 4%;
+                padding: 15px 14px;
 
                 li {
                     width: 100%;
@@ -270,7 +313,7 @@
                     p {
                         width: 100%;
                         height: auto;
-                        color: $title_2;
+                        color: $mainWord_1;
                         font-size: 4vw;
                         font-weight: bold;
                         @include textHidden;
@@ -287,9 +330,9 @@
     width: 90%;
     height: calc(100vh - 125px);
     background: $mainBG_1;
-    border: solid 1px $mainBorder_2;
+    border: solid 1px $mainBorder_1;
     border-radius: 10px;
-    box-shadow: 0 2px 4px 0 $boxshadow_1;
+    box-shadow: 0 5px 6px -2px $mainShadow_2;
     position: relative;
     overflow-y: auto;
     margin: 15px auto;
@@ -308,8 +351,8 @@
     }
 
     .title {
-        color: $title_2;
-        font-size: 4.5;
+        color: $title_1;
+        font-size: 4vw;
         font-weight: bold;
         margin: 20px 0;
     }
@@ -318,6 +361,7 @@
         color: $mainWord_1;
         font-size: 3.4vw;
         font-weight: bold;
-        line-height: 20px;
+        line-height: 5.5vw;
+        margin-bottom: 10px;
     }
 }

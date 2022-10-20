@@ -6,39 +6,37 @@
     .wallet {
         width: 92vw;
         height: auto;
-        border-radius: 5px;
         background: $mainBG_1;
+        border-radius: 5px;
         border: solid 1px $mainBorder_2;
-        box-shadow: 0 0 5px 0 $boxshadow_2;
+        box-shadow: 0 5px 6px -2px $mainShadow_2;
         display: flex;
         margin: 0 auto 10px;
-        padding: 12px 15px 10px;
+        padding: 14px;
 
         .helf {
             width: 100%;
-            height: 65px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            height: auto;
 
             .title {
-                color: $title_1;
-                font-size: 3.4vw;
+                color: $mainWord_1;
+                font-size: 4vw;
                 font-weight: bold;
                 letter-spacing: 1px;
                 display: flex;
                 align-items: center;
+                margin-bottom: 10px;
 
                 i {
-                    width: 4.27vw;
-                    height: 4.27vw;
-                    margin-left: 6px;
+                    width: 4vw;
+                    height: 4vw;
+                    margin-left: 10px;
                 }
                 
                 button {
-                    width: 18.93vw;
-                    height: 6.13vw;
-                    @include mainBtn;
+                    width: 18vw;
+                    height: 6vw;
+                    @include thirdBtn;
                     font-size: 3vw;
                     margin-left: 20px;
                 }
@@ -46,7 +44,7 @@
 
             .amount {
                 color: $money;
-                font-size: 7vw;
+                font-size: 6vw;
                 font-weight: bold;
             }
         }
@@ -56,19 +54,18 @@
         width: 100%;
         height: auto;
         background: $mainBG_1;
-        padding: 10px 14px;
+        padding: 14px;
 
         .selectBox {
             width: auto;
             height: auto;
             position: relative;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
 
             select {
                 width: 100%;
-                height: 42px;
+                height: 10vw;
                 @include mainSelect;
-                font-size: 3.4vw;
                 padding-left: 12vw;
             }
 
@@ -85,19 +82,23 @@
 
         input {
             width: 100%;
-            height: 42px;
+            height: 10vw;
             @include mainInput;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .check {
-            width: 100%;
-            height: 42px;
+            width: 85%;
+            height: 10vw;
             @include mainBtn;
+            display: block;
+            margin: 0 auto;
         }
     }
 
     .forPlatform {
+        width: 100%;
+        height: auto;
         background: $mainBG_1;
         margin-top: 10px;
         padding-bottom: 15px;
@@ -105,25 +106,21 @@
         .title {
             width: 100%;
             height: auto;
-            color: $title_Time;
+            color: $time;
             font-size: 3vw;
             font-weight: bold;
             letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 15px 0;
-            margin-bottom: 11px;
+            padding: 12px 15px;
         }
 
         ul {
             width: 100%;
             height: auto;
-            max-height: 67.16vw;
+            max-height: 67vw;
             display: grid;
             grid-template-columns: repeat(3,1fr);
             gap: 8px;
-            padding: 0 3.6vw;
+            padding: 0 14px;
             overflow: hidden;
 
             &.active {
@@ -133,13 +130,13 @@
             li {
                 width: auto;
                 height: auto;
-                min-height: 16.53vw;
-                border: solid 1px $mainBorder_1;
-                border-radius: 1.5vw;
-                padding: 8px 0 0 11px;
+                min-height: 16.5vw;
+                border: solid 1px $mainBorder_2;
+                border-radius: 5px;
+                padding: 8px 0 0 10px;
 
                 div {
-                    color: $title_2;
+                    color: $mainWord_1;
                     font-size: 3vw;
                     font-weight: bold;
                     letter-spacing: 1px;
@@ -149,40 +146,29 @@
                     .smallInfo {
                         width: 4.5vw;
                         height: 4.5vw;
-                        margin-left: 5px;
                         position: relative;
                         opacity: 0;
                         pointer-events: none;
+                        margin-left: 5px;
 
                         &.display {
                             opacity: 1;
                             pointer-events: visible;
                         }
 
-                        &:hover,&:active,&.active {
-
-                            .inner {
-                                display: block;
-                            }
-                        }
-
                         .inner {
-                            display: none;
-                            width: auto;
-                            height: auto;
                             @include smallTip;
-                            padding: 6px 18px;
-                            position: absolute;
+                            display: none;
                             left: 50%;
                             transform: translateX(-50%);
-                            bottom: -30px;
+                            bottom: -6vw;
                         }
                     }
                 }
 
                 p {
                     color: $money;
-                    font-size: 5vw;
+                    font-size: 4.5vw;
                     font-weight: bold;
                     margin-top: 10px;
                 }
@@ -196,25 +182,28 @@
             justify-content: center;
             margin-top: 15px;
 
+            &.active {
+
+                div {
+
+                    .db_arrow {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
             div {
-                color: $title_2;
+                color: $mainWord_1;
                 font-size: 3vw;
                 font-weight: bold;
                 letter-spacing: 1px;
                 display: flex;
                 align-items: center;
 
-                &.active {
-
-                    .db_arrow {
-                        transform: rotate(180deg);
-                    }
-                }
-
                 .db_arrow {
-                    width: 12px;
-                    height: 12px;
-                    margin-left: 9px;
+                    width: 3vw;
+                    height: 3vw;
+                    margin-left: 10px;
                     transition: all 0.5s ease;
                 }
             }
