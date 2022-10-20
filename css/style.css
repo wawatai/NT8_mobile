@@ -1578,7 +1578,7 @@ html body .filter .jumpWindow.loginWindow form .forget {
 html body .filter .jumpWindow.loginWindow form .forget p {
   font-size: 3.7vw;
   font-weight: bold;
-  color: #193ca6;
+  color: #0f5eff;
 }
 html body .filter .jumpWindow.loginWindow form .forget p span {
   margin: 0 2px;
@@ -1618,7 +1618,7 @@ html body .filter .jumpWindow.loginWindow .registerBtn {
   margin-bottom: 9vw;
 }
 html body .filter .jumpWindow.loginWindow .registerBtn p {
-  color: #193ca6;
+  color: #0f5eff;
   text-decoration: underline;
   margin-left: 10px;
 }
@@ -1818,7 +1818,7 @@ html body .filter .jumpWindow.register form label.isCheck p {
   font-weight: bold;
 }
 html body .filter .jumpWindow.register form label.isCheck p span {
-  color: #193ca6;
+  color: #0f5eff;
   text-decoration: underline;
 }
 html body .filter .jumpWindow.register form .checkBtn {
@@ -4363,7 +4363,7 @@ html body .helpInner ul li .textBox p.platform .downloadBtn {
   margin: 0 0 0 10px;
 }
 html body .helpInner ul li .textBox p a {
-  color: #193ca6;
+  color: #0f5eff;
 }
 html body .helpInner ul li .textBox .img {
   width: 100%;
@@ -6414,7 +6414,7 @@ html body .bettingWrap .list .recordBox ul li p.lose {
   color: #009245;
 }
 html body .bettingWrap .list .recordBox ul li p.link {
-  color: #193ca6;
+  color: #0f5eff;
   text-decoration: underline;
 }
 html body .bettingWrap .list .recordBox .innerBox {
