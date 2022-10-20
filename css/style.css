@@ -786,7 +786,6 @@ html body main {
   height: 100%;
   background: #e5e5e6;
   padding: 45px 0 50px;
-  overflow-y: auto;
 }
 html body main.index {
   display: -webkit-box;
