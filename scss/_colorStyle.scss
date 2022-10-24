@@ -335,8 +335,9 @@ $vipDetail_Arrow: #0d3ac4;
     overflow: hidden;
 
     &.active {
-        background: #ffffff;
-        border: solid 2px #c7a76d;
+        background: #b37616;
+        border: solid 2px #ffffff;
+        color: #ffffff;
 
         &::before {
             content: "";
@@ -344,7 +345,7 @@ $vipDetail_Arrow: #0d3ac4;
             right: 0;
             bottom: 0;
             transform: translate(50%,50%) rotate(45deg);
-            background: #c7a76d;
+            background: #b71d0f;
             width: 8vw;
             height: 8vw;
         }

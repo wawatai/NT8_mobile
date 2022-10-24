@@ -6707,8 +6707,9 @@ html body .depositWrap .depList .listWrap ul li {
   margin-right: 5px;
 }
 html body .depositWrap .depList .listWrap ul li.active {
-  background: #ffffff;
-  border: solid 2px #c7a76d;
+  background: #b37616;
+  border: solid 2px #ffffff;
+  color: #ffffff;
 }
 html body .depositWrap .depList .listWrap ul li.active::before {
   content: "";
@@ -6717,7 +6718,7 @@ html body .depositWrap .depList .listWrap ul li.active::before {
   bottom: 0;
   -webkit-transform: translate(50%, 50%) rotate(45deg);
           transform: translate(50%, 50%) rotate(45deg);
-  background: #c7a76d;
+  background: #b71d0f;
   width: 8vw;
   height: 8vw;
 }
