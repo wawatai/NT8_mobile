@@ -635,3 +635,22 @@ button:disabled {
         display: flex;
     }
 }
+@mixin goTop {
+    background: linear-gradient(to top,#e7990b 0%,#ffe467 77%);
+    border-radius: 8px;
+    border: solid 1px #936614;
+    box-shadow: 0 5px 6px -2px #00000034;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    &:active,&.active {
+        background: linear-gradient(to bottom,#e7990b 0%,#ffe467 77%);
+    }
+
+    &.display {
+        display: flex;
+    }
+}
+$goTop_Color: #523103;

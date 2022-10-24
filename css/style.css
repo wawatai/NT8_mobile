@@ -615,6 +615,11 @@ footer .active .center_ic {
   background-size: contain;
 }
 
+.goTop i {
+  background: url("../images/icon/arrow_2.png") no-repeat center;
+  background-size: contain;
+}
+
 .single-item {
   width: 100%;
   height: 45vw;
@@ -1239,21 +1244,19 @@ html body .memberArea .operateBG .alLogin .amount {
 }
 html body .homeCenter {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  overflow: hidden;
 }
 html body .homeCenter .gameList {
   width: auto;
-  height: 100%;
+  height: auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  overflow-y: auto;
   padding: 10px 14px;
 }
 html body .homeCenter .gameList li {
@@ -1307,8 +1310,7 @@ html body .homeCenter .gameList li i.fish_ic, html body .homeCenter .gameList li
 }
 html body .homeCenter .gameBox {
   width: 100%;
-  height: 100%;
-  overflow-y: auto;
+  height: auto;
   padding-right: 14px;
   display: none;
 }
@@ -1330,6 +1332,49 @@ html body .homeCenter .gameBox li p {
   position: absolute;
   bottom: -6vw;
   left: 0;
+}
+html body .goTop {
+  width: 16vw;
+  height: 16vw;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e7990b), color-stop(77%, #ffe467));
+  background: linear-gradient(to top, #e7990b 0%, #ffe467 77%);
+  border-radius: 8px;
+  border: solid 1px #936614;
+  -webkit-box-shadow: 0 5px 6px -2px rgba(0, 0, 0, 0.2039215686);
+          box-shadow: 0 5px 6px -2px rgba(0, 0, 0, 0.2039215686);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+}
+html body .goTop:active, html body .goTop.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e7990b), color-stop(77%, #ffe467));
+  background: linear-gradient(to bottom, #e7990b 0%, #ffe467 77%);
+}
+html body .goTop.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+html body .goTop p {
+  color: #523103;
+  font-size: 3vw;
+  font-weight: bold;
+}
+html body .goTop i {
+  width: 7vw;
+  height: 7vw;
+  margin-bottom: 5px;
 }
 html body footer {
   width: 100%;
