@@ -334,6 +334,34 @@ footer .active .center_ic {
     background: url('../images/medal.png') no-repeat center;
     background-size: contain;
 }
+.vipWrap .medal.v1 {
+    background: url('../images/medal_2.png') no-repeat center;
+    background-size: contain;
+}
+.vipWrap .medal.v2 {
+    background: url('../images/medal_3.png') no-repeat center;
+    background-size: contain;
+}
+.vipWrap .medal.v3 {
+    background: url('../images/medal_4.png') no-repeat center;
+    background-size: contain;
+}
+.vipWrap .medal.v4 {
+    background: url('../images/medal_5.png') no-repeat center;
+    background-size: contain;
+}
+.vipWrap .medal.v5 {
+    background: url('../images/medal_6.png') no-repeat center;
+    background-size: contain;
+}
+.vipWrap .medal.v6 {
+    background: url('../images/medal_7.png') no-repeat center;
+    background-size: contain;
+}
+.vipWrap .medal.v7 {
+    background: url('../images/medal_8.png') no-repeat center;
+    background-size: contain;
+} 
 .vipWrap .cardBox i {
     background: url('../images/icon/arrow_1.png') no-repeat center;
     background-size: contain;
@@ -348,6 +376,26 @@ footer .active .center_ic {
 }
 .vipWrap .cardBox .card li.vip2 {
     background: url('../images/vip_card_3.png') no-repeat;
+    background-size: 100%;
+}
+.vipWrap .cardBox .card li.vip3 {
+    background: url('../images/vip_card_4.png') no-repeat;
+    background-size: 100%;
+}
+.vipWrap .cardBox .card li.vip4 {
+    background: url('../images/vip_card_5.png') no-repeat;
+    background-size: 100%;
+}
+.vipWrap .cardBox .card li.vip5 {
+    background: url('../images/vip_card_6.png') no-repeat;
+    background-size: 100%;
+}
+.vipWrap .cardBox .card li.vip6 {
+    background: url('../images/vip_card_7.png') no-repeat;
+    background-size: 100%;
+}
+.vipWrap .cardBox .card li.vip7 {
+    background: url('../images/vip_card_8.png') no-repeat;
     background-size: 100%;
 }
 .vipWrap .checkBtn .arrow_ic {
@@ -537,9 +585,9 @@ footer .active .center_ic {
 
 
 //header - logo
-// header .logo {
-//     width: 95px;
-// }
+ header .logo {
+     width: 82px;
+ }
 
 //ad - banner
 .single-item {
